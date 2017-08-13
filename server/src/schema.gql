@@ -1,0 +1,27 @@
+type Torrent {
+  name: String!
+  progress: Float!
+  url: String!
+}
+
+type CommandResult {
+  success: Boolean!
+}
+
+type Query {
+  activeTorrents: [Torrent]!
+}
+
+type Subscription {
+  activeTorrents: [Torrent]!
+}
+
+type Mutation {
+  addTorrent(url: String!): CommandResult
+}
+
+schema {
+  query: Query
+  subscription: Subscription
+  mutation: Mutation
+}

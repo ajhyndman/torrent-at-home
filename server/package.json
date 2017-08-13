@@ -1,0 +1,37 @@
+{
+  "name": "torrent-at-home-server",
+  "version": "1.0.0",
+  "description": "A bespoke webtorrent wrapper with a GraphQL api",
+  "main": "lib/index.js",
+  "repository": "git@github.com:ajhyndman/torrent-at-home.git",
+  "author": "ajhyndman@hotmail.com",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "rollup --config rollup.config.js --output lib/index.js",
+    "build:watch": "yarn run build -- --watch",
+    "start": "node ./lib/index.js"
+  },
+  "dependencies": {
+    "express": "4.15.4",
+    "express-graphql": "0.6.7",
+    "graphql": "0.10.5",
+    "graphql-subscriptions": "0.4.4",
+    "graphql-tools": "1.1.0",
+    "webtorrent": "0.98.19",
+    "ws": "3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "eslint": "4.4.1",
+    "eslint-config-ajhyndman": "1.2.1",
+    "flow-bin": "0.52.0",
+    "prettier": "1.5.3",
+    "rollup": "0.47.2",
+    "rollup-plugin-babel": "3.0.1",
+    "rollup-plugin-string": "2.0.2"
+  }
+}
